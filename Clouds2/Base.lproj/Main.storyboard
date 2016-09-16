@@ -34,20 +34,36 @@
                                     <action selector="refreshView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sh5-hn-AKb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hif-wA-e13">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Uyg-I7-DN0"/>
+                                    <constraint firstAttribute="width" secondItem="hif-wA-e13" secondAttribute="height" multiplier="1:1" id="ePU-tH-TZ8"/>
+                                </constraints>
+                                <state key="normal" title="💾">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareCloud:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jH0-pD-W7i"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.93725490199999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hif-wA-e13" firstAttribute="baseline" secondItem="QKn-BS-mV9" secondAttribute="baseline" id="7Fi-iZ-4hY"/>
                             <constraint firstAttribute="trailing" secondItem="8Tw-lO-0qM" secondAttribute="trailing" id="GDM-m5-Fj0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QKn-BS-mV9" secondAttribute="bottom" constant="20" id="QIE-Zl-SfL"/>
-                            <constraint firstItem="8Tw-lO-0qM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SKL-GJ-YaF"/>
+                            <constraint firstItem="8Tw-lO-0qM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="SKL-GJ-YaF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Tw-lO-0qM" secondAttribute="bottom" id="Vyo-cO-zbQ"/>
                             <constraint firstItem="8Tw-lO-0qM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xlm-6k-Gul"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QKn-BS-mV9" secondAttribute="trailing" constant="20" id="dz8-v8-Q6s"/>
+                            <constraint firstItem="QKn-BS-mV9" firstAttribute="leading" secondItem="hif-wA-e13" secondAttribute="trailing" constant="20" id="l87-Db-I0n"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cloudView" destination="8Tw-lO-0qM" id="2X5-y5-Da0"/>
                         <outlet property="refreshButton" destination="QKn-BS-mV9" id="kBH-ft-AuK"/>
+                        <outlet property="saveButton" destination="hif-wA-e13" id="lxN-p1-sHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
