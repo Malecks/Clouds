@@ -32,13 +32,13 @@ import UIKit
         for cloud in cloudPillars {
             let path = createCircleForCloudPoint(cloudPoint: cloud)
             path.fill()
-            for x in 1...arc4random_uniform(6) + 1 {
+            for x in 1...arc4random_uniform(5) + 3 {
                 let path = UIBezierPath()
                 path.addArc(
                     withCenter: cloud.point,
                     radius: cloud.radius - CGFloat(x) * 4,
-                    startAngle: CGFloat.angle(0 + Double(x * 10)),
-                    endAngle: CGFloat.angle(130 - Double(x * 10)),
+                    startAngle: CGFloat.angle(0 + Double(x * 5)),
+                    endAngle: CGFloat.angle(130 - Double(x * 5)),
                     clockwise: true
                 )
                 path.lineWidth = 2.0
@@ -97,8 +97,8 @@ extension CloudView {
         for _ in 1...CloudView.smallCloudsCount {
             let randomPillar = pillars[Int(arc4random_uniform(UInt32(pillars.count)))]
             
-            let x = (randomPillar.point.x - randomPillar.radius) + CGFloat(arc4random_uniform(UInt32(randomPillar.radius * 1.5)))
-            let y = (randomPillar.point.y - randomPillar.radius) + CGFloat(arc4random_uniform(UInt32(randomPillar.radius * 1.5)))
+            let x = (randomPillar.point.x - randomPillar.radius) + CGFloat(arc4random_uniform(UInt32(randomPillar.radius * 2.0)))
+            let y = (randomPillar.point.y - randomPillar.radius) + CGFloat(arc4random_uniform(UInt32(randomPillar.radius * 1.65)))
             let radius = getRadiusForPoint(point: CGPoint(x: x, y: y), rect: rect) * (CGFloat(arc4random_uniform(30) + 5) / 100)
             points.append(CloudPoint(point: CGPoint(x: x, y: y), radius: radius))
         }
