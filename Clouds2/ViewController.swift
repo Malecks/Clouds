@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var cloudView: CloudView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.refreshButton.layer.cornerRadius = 10.0 //(self.refreshButton.frame.width / 2.0)
+        self.refreshButton.backgroundColor = UIColor.white
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func refreshView(_ sender: AnyObject) {
+        self.cloudView.setNeedsDisplay()
     }
-
-
 }
 

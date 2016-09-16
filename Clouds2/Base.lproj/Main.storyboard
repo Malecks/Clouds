@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clouds2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-lO-0qM" customClass="CloudView" customModule="Clouds2" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.91498881431946311" green="0.93334032441208059" blue="0.96923063480000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKn-BS-mV9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9TJ-bg-W3d"/>
+                                    <constraint firstAttribute="width" secondItem="QKn-BS-mV9" secondAttribute="height" multiplier="1:1" id="AFx-CT-b8H"/>
+                                </constraints>
+                                <state key="normal" title="☁️"/>
+                                <connections>
+                                    <action selector="refreshView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sh5-hn-AKb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Tw-lO-0qM" secondAttribute="trailing" id="GDM-m5-Fj0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QKn-BS-mV9" secondAttribute="bottom" constant="20" id="QIE-Zl-SfL"/>
+                            <constraint firstItem="8Tw-lO-0qM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SKL-GJ-YaF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Tw-lO-0qM" secondAttribute="bottom" id="Vyo-cO-zbQ"/>
+                            <constraint firstItem="8Tw-lO-0qM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xlm-6k-Gul"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QKn-BS-mV9" secondAttribute="trailing" constant="20" id="dz8-v8-Q6s"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cloudView" destination="8Tw-lO-0qM" id="2X5-y5-Da0"/>
+                        <outlet property="refreshButton" destination="QKn-BS-mV9" id="kBH-ft-AuK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="115.59220389805098" y="122.40000000000001"/>
         </scene>
     </scenes>
 </document>

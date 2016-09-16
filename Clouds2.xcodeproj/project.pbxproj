@@ -14,6 +14,7 @@
 		92BD3CF01D8C3849002C7553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BD3CEE1D8C3849002C7553 /* LaunchScreen.storyboard */; };
 		92BD3CFB1D8C384A002C7553 /* Clouds2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD3CFA1D8C384A002C7553 /* Clouds2Tests.swift */; };
 		92BD3D061D8C384A002C7553 /* Clouds2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD3D051D8C384A002C7553 /* Clouds2UITests.swift */; };
+		92BD3D141D8C3870002C7553 /* CloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD3D131D8C3870002C7553 /* CloudView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		92BD3D011D8C384A002C7553 /* Clouds2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clouds2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BD3D051D8C384A002C7553 /* Clouds2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds2UITests.swift; sourceTree = "<group>"; };
 		92BD3D071D8C384A002C7553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BD3D131D8C3870002C7553 /* CloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				92BD3CE51D8C3849002C7553 /* AppDelegate.swift */,
 				92BD3CE71D8C3849002C7553 /* ViewController.swift */,
+				92BD3D131D8C3870002C7553 /* CloudView.swift */,
 				92BD3CE91D8C3849002C7553 /* Main.storyboard */,
 				92BD3CEC1D8C3849002C7553 /* Assets.xcassets */,
 				92BD3CEE1D8C3849002C7553 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BD3D141D8C3870002C7553 /* CloudView.swift in Sources */,
 				92BD3CE81D8C3849002C7553 /* ViewController.swift in Sources */,
 				92BD3CE61D8C3849002C7553 /* AppDelegate.swift in Sources */,
 			);
